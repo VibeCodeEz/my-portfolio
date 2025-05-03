@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emanuel's Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  
+<header class="header">
+  <h1>Emanuel</h1>
+
+  
+  <div class="header-right">
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- Sections -->
+  <section id="home" class="section" data-aos="fade-up">
+    <div class="hero-content">
+      <h2>Welcome to My Digital Portfolio</h2>
+      <p class="hero-subtitle">I'm a <span class="typed-text">Morabe, Emanuel Zack</span><span class="cursor">&nbsp;</span></p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="assets/images/Emanuel Zack Morabe.pdf" download class="btn btn-secondary">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+      <div class="scroll-indicator">
+        <p>Explore my work below</p>
+        <div class="mouse-scroll"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section" data-aos="fade-left">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+      <img src="assets/images/mypic.jpg" alt="My Photo" style="width: 250px; border-radius: 20px;">
+      <div>
+        <h2>About Me</h2>
+        <p class="intro">
+            A passionate <strong>Computer Engineering student</strong> with a love for crafting seamless and impactful digital experiences. 
+            My journey in tech is driven by curiosity and creativity—whether I'm designing intuitive user interfaces or building robust applications.
+          </p>
+        
+          <div class="section">
+            <h2>💻 What I Do</h2>
+            <ul class="skills">
+              <li>
+                <strong>Front-End Development:</strong> I specialize in creating responsive, user-friendly web interfaces using modern technologies like 
+                <strong>React, JavaScript, HTML/CSS</strong>, and frameworks like <strong>TailwindCSS</strong>.
+              </li>
+              <li>
+                <strong>Python Projects:</strong> From scripting to web development (<strong>Django/Flask</strong>) and automation, I enjoy leveraging Python’s versatility to solve problems efficiently.
+              </li>
+              <li>
+                <strong>Full-Stack Curiosity:</strong> While front-end is my forte, I’m expanding my skills into back-end development to build end-to-end solutions.
+              </li>
+            </ul>
+          </div>
+        
+          <div class="section">
+            <h2>🚀 Why I Code</h2>
+            <p>
+              I believe technology should be both <strong>functional and delightful</strong>. Whether it’s optimizing performance, improving accessibility, 
+              or experimenting with new tools, I’m always eager to learn and apply my skills to meaningful projects.
+            </p>
+          </div>
+        
+          <div class="section">
+            <h2>🌱 Beyond Tech</h2>
+            <p>
+              When I’m not coding, you’ll find me diving into <strong>UI/UX design principles</strong>, contributing to <strong>open-source projects</strong>, 
+              or exploring tech communities to collaborate and grow.
+            </p>
+          </div>
+        
+          <p class="cta">Let’s connect and build something amazing together!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section" data-aos="fade-right">
+    <h2>Skills</h2>
+    
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Frontend Development</h3>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>HTML</span>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%" data-value="90"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>CSS</span>
+            <span>85%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%" data-value="85"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>JavaScript</span>
+            <span>75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%" data-value="75"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>React</span>
+            <span>50%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 50%" data-value="50"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Programming Languages</h3>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Python</span>
+            <span>80%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%" data-value="80"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>C++</span>
+            <span>70%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%" data-value="70"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>C</span>
+            <span>65%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%" data-value="65"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Tools & Technologies</h3>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Git & GitHub</span>
+            <span>75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%" data-value="75"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>UI/UX Design (Canva)</span>
+            <span>70%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%" data-value="70"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-info">
+            <span>Figma</span>
+            <span>60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 60%" data-value="60"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section" data-aos="zoom-in">
+    <h2>My Projects</h2>
+    
+    <div class="project-filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="app">Applications</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+    
+    <div class="projects-container">
+      <!-- Add data-category attribute to each project card -->
+      <div class="project-card" data-category="web">
+        <img src="assets/images/weather app 1.jpg" alt="Weather App">
+        <div class="project-info">
+          <h3>Weather App</h3>
+          <p>Interactive weather application with current conditions and 5-day forecast using OpenWeatherMap API. Features modern UI with search functionality and responsive design.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">API</span>
+            <span class="tag">CSS</span>
+            <span class="tag">HTML5</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card" data-category="web design">
+        <img src="assets/images/work 2.jpg" alt="Portfolio Website">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>This very website you're viewing now.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Add more projects for demonstration -->
+      <div class="project-card" data-category="app">
+        <img src="assets/images/calculator.jpg" alt="Scientific Calculator App">
+        <div class="project-info">
+          <h3>Scientific Calculator</h3>
+          <p>An interactive scientific calculator with dual themes, memory functions, and comprehensive mathematical operations. Supports both basic and advanced calculations with a modern, responsive interface.</p>
+          <div class="project-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">Scientific</span>
+            <span class="tag">Web App</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-card" data-category="design">
+        <img src="assets/images/figma.jpg" alt="UI Design Concept">
+        <div class="project-info">
+          <h3>UI Design Concept</h3>
+          <p>A modern mobile app interface designed in Figma.</p>
+          <div class="project-tags">
+            <span class="tag">UI/UX</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>morabeemanuel030@gmail.com</span>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/VibeCodeEz" target="_blank">github.com/VibeCodeEz</a>
+          </div>
+          
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>Emanuel</h3>
+        <p>Computer Engineering Student</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://github.com/VibeCodeEz" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:morabeemanuel030@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Emanuel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <button id="scrollToTop" class="scroll-to-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div id="lightbox-caption"></div>
+</div>
+</body>
+</html>
