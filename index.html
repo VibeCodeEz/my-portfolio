@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emanuel's Portfolio</title>
+  <!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init('wPYloQaakZU1ImSMY');
+</script>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -26,6 +34,9 @@
 
   
   <div class="header-right">
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
     <button class="menu-toggle" aria-label="Toggle menu">
       <i class="fas fa-bars"></i>
     </button>
@@ -45,7 +56,7 @@
   <section id="home" class="section" data-aos="fade-up">
     <div class="hero-content">
       <h2>Welcome to My Digital Portfolio</h2>
-      <p class="hero-subtitle">I'm a <span class="typed-text">Morabe, Emanuel Zack</span><span class="cursor">&nbsp;</span></p>
+      <p class="hero-subtitle">I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
       <div class="hero-buttons">
         <a href="#projects" class="btn btn-primary">View My Work</a>
         <a href="assets/images/Emanuel Zack Morabe.pdf" download class="btn btn-secondary">
@@ -77,10 +88,10 @@
                 <strong>React, JavaScript, HTML/CSS</strong>, and frameworks like <strong>TailwindCSS</strong>.
               </li>
               <li>
-                <strong>Python Projects:</strong> From scripting to web development (<strong>Django/Flask</strong>) and automation, I enjoy leveraging Python’s versatility to solve problems efficiently.
+                <strong>Python Projects:</strong> From scripting to web development (<strong>Django/Flask</strong>) and automation, I enjoy leveraging Python's versatility to solve problems efficiently.
               </li>
               <li>
-                <strong>Full-Stack Curiosity:</strong> While front-end is my forte, I’m expanding my skills into back-end development to build end-to-end solutions.
+                <strong>Full-Stack Curiosity:</strong> While front-end is my forte, I'm expanding my skills into back-end development to build end-to-end solutions.
               </li>
             </ul>
           </div>
@@ -88,20 +99,20 @@
           <div class="section">
             <h2>🚀 Why I Code</h2>
             <p>
-              I believe technology should be both <strong>functional and delightful</strong>. Whether it’s optimizing performance, improving accessibility, 
-              or experimenting with new tools, I’m always eager to learn and apply my skills to meaningful projects.
+              I believe technology should be both <strong>functional and delightful</strong>. Whether it's optimizing performance, improving accessibility, 
+              or experimenting with new tools, I'm always eager to learn and apply my skills to meaningful projects.
             </p>
           </div>
         
           <div class="section">
             <h2>🌱 Beyond Tech</h2>
             <p>
-              When I’m not coding, you’ll find me diving into <strong>UI/UX design principles</strong>, contributing to <strong>open-source projects</strong>, 
+              When I'm not coding, you'll find me diving into <strong>UI/UX design principles</strong>, contributing to <strong>open-source projects</strong>, 
               or exploring tech communities to collaborate and grow.
             </p>
           </div>
         
-          <p class="cta">Let’s connect and build something amazing together!</p>
+          <p class="cta">Let's connect and build something amazing together!</p>
       </div>
     </div>
   </section>
@@ -298,62 +309,71 @@
       
       
 
-  <section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    
-    <div class="contact-container">
-      <div class="contact-info">
-        <h3>Get In Touch</h3>
-        <p>Feel free to reach out for collaborations or just a friendly chat!</p>
-        
-        <div class="contact-details">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <span>morabeemanuel030@gmail.com</span>
-          </div>
+    <section id="contact" class="section" data-aos="fade-up">
+      <h2>Contact Me</h2>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p>Feel free to reach out for collaborations or just a friendly chat!</p>
           
-          <div class="contact-item">
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/VibeCodeEz" target="_blank">github.com/VibeCodeEz</a>
-          </div>
-          
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>morabeemanuel030@gmail.com</span>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/VibeCodeEz" target="_blank">github.com/VibeCodeEz</a>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a>
+            </div>
           </div>
         </div>
+        
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message">Please enter your name</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message">Please enter a valid email address</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+              <span class="error-message">Please enter a subject</span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="error-message">Please enter your message</span>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+          <div id="form-status" class="form-status"></div>
+        </div>
       </div>
-      
-      <div class="contact-form-container">
-        <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <button type="submit" class="submit-btn">
-            <span>Send Message</span>
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
+    
+    
+    
+
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
@@ -393,6 +413,110 @@
   <script>
     AOS.init();
   </script>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    const themeToggle = document.querySelector('.theme-toggle');
+    const icon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.body.classList.add(savedTheme);
+      updateIcon(savedTheme);
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const currentTheme = document.body.classList.contains('dark-theme') ? 'dark-theme' : '';
+      localStorage.setItem('theme', currentTheme);
+      updateIcon(currentTheme);
+    });
+    
+    function updateIcon(theme) {
+      icon.classList.toggle('fa-moon', !theme);
+      icon.classList.toggle('fa-sun', theme);
+    }
+  </script>
+
+  <!-- Typing Animation and Skill Bar Script -->
+  <script>
+    // Typing Animation
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+    const textArray = ["Computer Engineering Student", "Frontend Developer", "Morabe, Emanuel Zack", ];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 2000;
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } 
+      else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+
+    // Skill Bar Animation
+    const skillBars = document.querySelectorAll('.progress');
+    
+    function showProgress() {
+      skillBars.forEach(skillBar => {
+        const value = skillBar.getAttribute('data-value');
+        skillBar.style.opacity = 1;
+        skillBar.style.width = value + '%';
+      });
+    }
+
+    function hideProgress() {
+      skillBars.forEach(skillBar => {
+        skillBar.style.opacity = 0;
+        skillBar.style.width = 0;
+      });
+    }
+
+    // Animate skill bars when they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          showProgress();
+        } else {
+          hideProgress();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(skillBar => {
+      observer.observe(skillBar);
+    });
+  </script>
+
   <button id="scrollToTop" class="scroll-to-top">
   <i class="fas fa-arrow-up"></i>
 </button>
@@ -401,5 +525,60 @@
   <img class="lightbox-content" id="lightbox-img">
   <div id="lightbox-caption"></div>
 </div>
+
+  <!-- EmailJS Script -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = this.querySelector('.submit-btn');
+      const formStatus = document.getElementById('form-status');
+      
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
+      
+      // Get form data
+      const formData = {
+        from_name: document.getElementById('name').value,
+        from_email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        to_email: 'morabeeman@gmail.com'
+      };
+      
+      // Send email using EmailJS
+      emailjs.send('service_nia59eu', 'template_9kmnmd9', formData)
+        .then(function() {
+          // Show success message
+          formStatus.innerHTML = '<div class="success-message">Message sent successfully! I will get back to you soon.</div>';
+          formStatus.style.display = 'block';
+          
+          // Reset form
+          document.getElementById('contactForm').reset();
+          
+          // Reset button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            formStatus.style.display = 'none';
+          }, 5000);
+        })
+        .catch(function(error) {
+          // Show error message
+          formStatus.innerHTML = '<div class="error-message">Sorry, there was an error sending your message. Please try again later.</div>';
+          formStatus.style.display = 'block';
+          
+          // Reset button
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+          
+          console.error('Error:', error);
+        });
+    });
+  </script>
+
 </body>
 </html>

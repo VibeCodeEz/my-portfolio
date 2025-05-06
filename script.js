@@ -417,3 +417,85 @@ function setupLightbox() {
     // ... existing code
     setupDarkMode();
   });
+// Add this to your main JavaScript file
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.getElementById('contactForm');
+  const formMessage = document.getElementById('form-message');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validate form
+    if (!validateForm()) {
+      return;
+    }
+    
+    // Get form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value
+    };
+    
+    // Send email using EmailJS
+    emailjs.send('service_nia59eu', 'template_9kmnmd9', formData, 'wPYloQaakZU1ImSMY')
+      .then(function(response) {
+        showMessage('Your message has been sent successfully!', 'success');
+        contactForm.reset();
+      }, function(error) {
+        showMessage('Failed to send message. Please try again later.', 'error');
+      });
+  });
+  
+  function validateForm() {
+    let isValid = true;
+    const formGroups = document.querySelectorAll('.form-group');
+    
+    formGroups.forEach(group => {
+      const input = group.querySelector('input, textarea');
+      const errorMessage = group.querySelector('.error-message');
+      
+      if (!input.value.trim()) {
+        errorMessage.style.display = 'block';
+        isValid = false;
+      } else {
+        errorMessage.style.display = 'none';
+      }
+      
+      // Additional email validation
+      if (input.type === 'email' && input.value.trim()) {
+        if (!validateEmail(input.value)) {
+          errorMessage.textContent = 'Please enter a valid email address';
+          errorMessage.style.display = 'block';
+          isValid = false;
+        }
+      }
+    });
+    
+    return isValid;
+  }
+  
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+  
+  function showMessage(message, type) {
+    formMessage.textContent = message;
+    formMessage.className = 'form-message ' + type;
+    formMessage.style.display = 'block';
+    
+    // Hide message after 5 seconds
+    setTimeout(() => {
+      formMessage.style.display = 'none';
+    }, 5000);
+  }
+});
+
+
+
+// Make sure to include EmailJS library in your HTML head
+// <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+// And initialize it with your public key
+// <script>emailjs.init('wPYloQaakZU1ImSMY');</script>
